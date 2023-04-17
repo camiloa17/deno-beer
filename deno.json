@@ -1,0 +1,29 @@
+{
+	"tasks": {
+		"start": "deno run --allow-net --allow-env --allow-read index.ts",
+		"dev": "deno run --watch --allow-net --allow-env --allow-read index.ts"
+	},
+	"lint": {
+		"files": {
+			"include": ["./"]
+		},
+		"rules": {
+			"tags": ["recommended"],
+			"include": ["ban-untagged-todo"],
+			"exclude": ["no-unused-vars"]
+		}
+	},
+	"fmt": {
+		"files": {
+			"include": ["./"]
+		},
+		"options": {
+			"useTabs": true,
+			"lineWidth": 80,
+			"indentWidth": 4,
+			"singleQuote": true,
+			"semiColons": false,
+			"proseWrap": "preserve"
+		}
+	}
+}
